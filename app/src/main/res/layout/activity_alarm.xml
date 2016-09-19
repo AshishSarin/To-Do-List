@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.squarelabs.sareen.simpletodo.ui.AlarmActivity">
+
+
+
+    <RelativeLayout
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="25dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_view_alarm"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/done_image_button_alarm"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_done"
+            android:onClick="onAlarmDone"
+            android:background="@drawable/close_image_button"
+            android:scaleType="centerCrop"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:id="@+id/task_title_text_alarm"
+            android:text="Do Exercise"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:minLines="2"
+            android:maxLines="2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/top_view_alarm"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_snooze"
+            android:scaleType="centerCrop"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:text="Snooze"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/snooze_spinner"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Task Completed"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onTaskComplete"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</RelativeLayout>

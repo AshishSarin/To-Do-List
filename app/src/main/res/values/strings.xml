@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">To-Do List</string>
+    <string name="action_settings_label">Settings</string>
+    <string name="action_about_label">About</string>
+    <string name="content_authority">com.squarelabs.sareen.simpletodo.provider</string>
+    <string name="unique_alarm_id">UNIQUE_ALARM_ID</string>
+    <string name="action_help">Help</string>
+</resources>
